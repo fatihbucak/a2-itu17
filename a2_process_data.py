@@ -46,11 +46,6 @@ def get_column_as_a_list(index_of_column):
         column_list += [contents[row][index_of_column]]
     return column_list
 
-def save_html_file(code,file_name):
-    html_file = open(file_name,"w")
-    print(code,file=html_file)
-    html_file.close()
-
 def get_row(index):
     row = ""
     for column in range(len(contents[index])):
@@ -117,36 +112,39 @@ style_code = '''<style>
             }
         </style>
 '''
-print("The below is variable contents")
-print(contents)
-print("The below is the first row of variable contents")
-print(contents[0])
-print("The below is entry which is in both first row and first column")
-print(contents[0][0])
-print("The below is the type of the variable contents")
-print(type(contents))
-print("The below is the type of the first row in the contents")
-print(type(contents[0]))
-print("The below is the type of the entry which is in both first row and first column")
-print(type(contents[0][0]))
-print("The below is the entry which is in second row and third column")
-print(contents[2][3])
-print("The below is the type of the entry which is in third row and second column")
-print(type(contents[3][2]))
-print("The below is sum of durations")
 sum_of_durations = calculate_the_sum(get_column_as_a_list(3))
-print(sum_of_durations)
-print("The below is average of imdb")
-print(average_of_imdb)
-# print(contents[10][10]) There is an error because the value doesn't exist. Error message: list index out of range
 thirty_third_line_of_content = "Movie: " + contents[33][0] + "\nYear: " + contents[33][1] + "\nImdb: " + contents[33][2] + "\nDuration: " + contents[33][3]
-print(thirty_third_line_of_content)
-# print(contents[1][0] + 3) There is an error because string can not be added an integer. Error message: must be str, not int
 product_of_string_and_integer = contents[143][0]*3
-print("The below is product of string and integer")
-print(product_of_string_and_integer)
-print(type(sum_of_durations))
-print(type(average_of_imdb))
-print(type(product_of_string_and_integer))
-help(average_of_imdb)
-save_html_file(html_base % ("Movies About Time Travel", style_code, get_some_content(), get_table_code()),"a2_output.html")
+
+# print("The below is variable contents")
+# print(contents)
+# print("The below is the first row of variable contents")
+# print(contents[0])
+# print("The below is entry which is in both first row and first column")
+# print(contents[0][0])
+# print("The below is the type of the variable contents")
+# print(type(contents))
+# print("The below is the type of the first row in the contents")
+# print(type(contents[0]))
+# print("The below is the type of the entry which is in both first row and first column")
+# print(type(contents[0][0]))
+# print("The below is the entry which is in second row and third column")
+# print(contents[2][3])
+# print("The below is the type of the entry which is in third row and second column")
+# print(type(contents[3][2]))
+# print("The below is sum of durations")
+# print(sum_of_durations)
+# print("The below is average of imdb")
+# print(average_of_imdb)
+# print(contents[10][10]) There is an error because the value doesn't exist. Error message: list index out of range
+# print(thirty_third_line_of_content)
+# print(contents[1][0] + 3) There is an error because string can not be added an integer. Error message: must be str, not int
+# print("The below is product of string and integer")
+# print(product_of_string_and_integer)
+# print(type(sum_of_durations))
+# print(type(average_of_imdb))
+# print(type(product_of_string_and_integer))
+# help(average_of_imdb)
+# save_html_file(html_base % ("Movies About Time Travel", style_code, get_some_content(), get_table_code()),"a2_output.html")
+
+print(html_base % ("Movies About Time Travel", style_code, get_some_content(), get_table_code()))
