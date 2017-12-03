@@ -145,6 +145,5 @@ product_of_string_and_integer = contents[143][0]*3
 # print(type(average_of_imdb))
 # print(type(product_of_string_and_integer))
 # help(average_of_imdb)
-# save_html_file(html_base % ("Movies About Time Travel", style_code, get_some_content(), get_table_code()),"a2_output.html")
 
 print(html_base % ("Movies About Time Travel", style_code, get_some_content(), get_table_code()))
